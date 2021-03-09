@@ -72,7 +72,7 @@ RSpec.describe Product, type: :model do
   
   describe '.authenticate_with_credentials' do
     # examples for this class method here
-    it 'should log the user in if the credentials are correct' do
+    it 'should log the user in if the credentials are right' do
       @user = User.new(first_name: "Jane", last_name: "Doe", email: "janedoe@email.com", password: "ABCDEF", password_confirmation: "ABCDEF")
       @user.save!
       expect(User.authenticate_with_credentials("janedoe@email.com", "ABCDEF")).to be_present
